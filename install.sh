@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+mkdir -p ~/.local/share/PrismLauncher
+echo '{"accounts": [{"entitlement": {"canPlayMinecraft": true,"ownsMinecraft": true},"type": "MSA"}],"formatVersion": 3}' > ~/.local/share/PrismLauncher/accounts.json
+
+
 clear
 
 PRISM_URL="https://github.com/PrismLauncher/PrismLauncher/releases/download/9.4/PrismLauncher-Linux-x86_64.AppImage"
@@ -89,7 +93,6 @@ else
     echo "Pominięto FO Down."
 fi
 
-echo '{"accounts": [{"entitlement": {"canPlayMinecraft": true,"ownsMinecraft": true},"type": "MSA"}],"formatVersion": 3}' > ~/.local/share/PrismLauncher/accounts.json
 echo
 echo "Gotowe."
 echo "Prism: $PRISM_BIN"
